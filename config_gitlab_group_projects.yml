@@ -1,0 +1,50 @@
+GitLab_Url: "http://gitlab.mycompany.com"
+private_token: "glpat-y8zR1sSauXx2EpktG-sr"
+group: "GROUP-NAME"
+maintainers: ['@acampos']
+developers: ['@djoe','@peterparker']
+projects:
+   app-frontend:
+      branch:
+         devel:
+            default: true
+      vars:
+         SONAR_HOST_URL:
+            value: "http://192.168.2.70:9000"
+            protected: false
+         SONAR_TOKEN:
+            value: "sqp_gf2332b0c1562221d91dcda6005ee3819225aeg2"
+            protected: false
+         SSH_HOST:
+            value: "192.168.2.120"
+            protected: false
+         DEPLOY_PATH_QA:
+            value: "/var/microservices/myapp-frontend"
+            protected: false
+         SSH_USER:
+            value: "devops"
+            protected: false
+      pipeline: "gitlab-ci.yml"
+   app-backend:
+      branch:
+         devel:
+            default: true
+      vars:
+         SONAR_HOST_URL:
+            value: "http://192.168.2.109:9100"
+            protected: false
+         SONAR_TOKEN:
+            value: "sqp_gf2332b0c1562221d91dcda6005ee3819225aeg2"
+            protected: false
+         SSH_HOST:
+            value: "192.168.2.125"
+            protected: false
+         DEPLOY_PATH_QA:
+            value: "/var/microservices/myapp-backend"
+            protected: false
+         SSH_USER:
+            value: "devops"
+            protected: false
+      pipeline: "gitlab-ci.yml"
+      runners:
+            runnerid: 30
