@@ -9,6 +9,7 @@ Se deja en este repositorio un archivo "config_gitlab_group_projects.yml" de eje
   python Create_GitLab_ProjectsGroup.py <Archivo .yml con la configuracion>
 
 Ejemplo:
+
   python3 Create_GitLab_ProjectsGroup.py config_gitlab_group_projects.yml
   
 Si el nombre del archivo .yml no es proporcionado, el script usará por defecto el archivo *config.yaml* o *config.yml* que se encuentre en el mismo directorio.
